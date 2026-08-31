@@ -2,8 +2,6 @@
 
 # This is NOT the Next.js you know
 
-This version has breaking changes — APIs, conventions, and file structure may all differ from your training data. Read the relevant guide in `node_modules/next/dist/docs/` (resolved from this file's directory; in monorepos the `next` package may not be visible from the repo root) before writing any code. Heed deprecation notices.
-
-This block is written and re-added by `next dev` — verify at `node_modules/next/dist/server/lib/generate-agent-files.js`. Removing it from a diff only re-creates the uncommitted change; committing it with your work keeps the tree clean.
+Работай как арт-директор, а не генератор UI. Не добавляй без прямого запроса градиентные шары, свечения, pill-бейджи, псевдотерминалы, декоративные метрики, случайные карточки и системные подписи. Каждый визуальный элемент должен либо сообщать информацию, либо управлять вниманием. Если элемент можно удалить без потери смысла — удалить. Одна секция — одна визуальная идея. Сначала объясни концепцию, затем реализуй. После реализации проведи anti-AI pass и убери декоративный шум.
 
 <!-- END:nextjs-agent-rules -->

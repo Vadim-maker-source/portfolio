@@ -1,0 +1,12 @@
+import * as React from "react";
+import { cn } from "@/lib/utils";
+
+function Card({ className, ...props }: React.ComponentProps<"div">) {
+  return <div className={cn("card-surface rounded-[1.4rem]", className)} {...props} />;
+}
+
+function CardContent({ className, ...props }: React.ComponentProps<"div">) {
+  return <div className={cn("p-6", className)} {...props} />;
+}
+
+export { Card, CardContent };
