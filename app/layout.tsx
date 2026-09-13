@@ -15,8 +15,8 @@ const geologica = Geologica({
 export const metadata: Metadata = {
   title: "Vadim67okak | Software Engineer",
   description:
-    "Портфолио Vadim67okak, software engineer с опытом в Next.js, TypeScript, Python, FastAPI, NestJS, базах данных, DevOps и кибербезопасности.",
-  keywords: ["Vadim67okak", "Software Engineer", "Next.js", "TypeScript", "Python", "FastAPI"],
+    "Портфолио Vadim67okak: разработка программных систем, DevOps, кибербезопасность и 3D-моделирование в Blender, ZBrush и Substance 3D Painter.",
+  keywords: ["Vadim67okak", "Software Engineer", "Next.js", "TypeScript", "Python", "FastAPI", "Blender", "ZBrush", "Substance 3D Painter"],
   authors: [{ name: "Vadim67okak" }],
   openGraph: {
     title: "Vadim67okak | Software Engineer",

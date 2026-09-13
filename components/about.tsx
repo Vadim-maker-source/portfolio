@@ -14,7 +14,7 @@ export function About() {
               Я в IT около трёх лет и развиваюсь как многопрофильный software developer, соединяя программирование, системное мышление и работу с цифровой инфраструктурой.
             </p>
             <p className="section-copy mt-5 max-w-none" data-reveal>
-              В моём опыте есть frontend и backend, базы данных, real-time коммуникации, DevOps и Linux. Параллельно и на практике расширяю знания в кибербезопасности, AI и мобильной разработке.
+              В моём опыте есть frontend и backend, базы данных, real-time коммуникации, DevOps и Linux. Также владею 3D-моделированием: работаю в Blender, ZBrush и Substance 3D Painter. Параллельно расширяю знания в кибербезопасности, AI и мобильной разработке.
             </p>
           </div>
         </div>

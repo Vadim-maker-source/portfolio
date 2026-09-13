@@ -7,7 +7,7 @@ export function Experience() {
     <section id="experience" className="section-shell" aria-labelledby="experience-title">
       <SectionReveal className="site-container">
         <div id="experience-title">
-          <SectionHeading label="Опыт и направления" title="Широкий инструментарий, подкреплённый практикой." description="Мой основной опыт находится на пересечении разработки интерфейсов и backend-систем, дополненных инфраструктурой и новыми техническими направлениями." />
+          <SectionHeading label="Опыт и направления" title="Широкий инструментарий, подкреплённый практикой." description="Работаю с интерфейсами, backend-системами, инфраструктурой и 3D-графикой, развивая каждое направление через практику." />
         </div>
         <ExpertiseGrid />
       </SectionReveal>

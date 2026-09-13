@@ -19,9 +19,10 @@ export const expertise = [
   { title: "CyberSecurity", experience: "4 месяца", technologies: ["Burp Suite", "Ghidra", "Wireshark", "Kali Linux", "OSINT", "Криптография", "Форензика"], description: "Развиваю практические знания в анализе веб-приложений, OSINT, криптографии, reverse engineering и цифровой криминалистике.", index: "04" },
   { title: "AI", experience: "2 месяца", technologies: ["AI-инструменты", "Интеграция в продукты", "Прикладные процессы"], description: "Изучаю современные AI-инструменты и практические способы интегрировать интеллектуальные возможности в полезные программные продукты.", index: "05" },
   { title: "Mobile", experience: "2 месяца", technologies: ["Flutter", "Dart"], description: "Изучаю кроссплатформенную мобильную разработку и создаю приложения с помощью Flutter и Dart.", index: "06" },
+  { title: "3D-графика", experience: "Практический навык", technologies: ["Blender", "ZBrush", "Substance 3D Painter"], description: "Создаю 3D-модели, работаю со скульптингом, детализацией и текстурированием объектов.", index: "07" },
 ] as const;
 
-export type TechnologyIcon = "javascript" | "typescript" | "dart" | "python" | "bash" | "cplusplus" | "sqlite" | "postgresql" | "nextjs" | "tailwind" | "fastapi" | "nodejs" | "nestjs" | "docker" | "nginx" | "git" | "linux" | "flutter" | "mysql" | "websocket" | "webrtc" | "burpsuite" | "ghidra" | "wireshark" | "kalilinux";
+export type TechnologyIcon = "javascript" | "typescript" | "dart" | "python" | "bash" | "cplusplus" | "sqlite" | "postgresql" | "nextjs" | "tailwind" | "fastapi" | "nodejs" | "nestjs" | "docker" | "nginx" | "git" | "linux" | "flutter" | "mysql" | "websocket" | "webrtc" | "burpsuite" | "ghidra" | "wireshark" | "kalilinux" | "blender" | "zbrush" | "substance";
 
 export const technologies: ReadonlyArray<{ name: string; category: string; icon: TechnologyIcon; color: string }> = [
   { name: "JavaScript", category: "Язык", icon: "javascript", color: "#F7DF1E" }, { name: "TypeScript", category: "Язык", icon: "typescript", color: "#3178C6" },
@@ -39,4 +40,7 @@ export const technologies: ReadonlyArray<{ name: string; category: string; icon:
   { name: "Ghidra", category: "Reverse engineering", icon: "ghidra", color: "#EF4444" },
   { name: "Wireshark", category: "Анализ трафика", icon: "wireshark", color: "#1679A7" },
   { name: "Kali Linux", category: "Дистрибутив", icon: "kalilinux", color: "#557C94" },
+  { name: "Blender", category: "3D-моделирование", icon: "blender", color: "#E87D0D" },
+  { name: "ZBrush", category: "Цифровой скульптинг", icon: "zbrush", color: "#C4B5FD" },
+  { name: "Substance 3D Painter", category: "Текстурирование", icon: "substance", color: "#A3E635" },
 ];

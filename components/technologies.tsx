@@ -2,9 +2,9 @@
 
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { motion } from "framer-motion";
-import { Binary, Radio, Waypoints } from "lucide-react";
+import { Binary, Box, Paintbrush, Radio, Waypoints } from "lucide-react";
 import type { IconType } from "react-icons";
-import { SiBurpsuite, SiCplusplus, SiDart, SiDocker, SiFastapi, SiFlutter, SiGit, SiGnubash, SiJavascript, SiKalilinux, SiLinux, SiMysql, SiNestjs, SiNextdotjs, SiNginx, SiNodedotjs, SiPostgresql, SiPython, SiSqlite, SiTailwindcss, SiTypescript, SiWireshark } from "react-icons/si";
+import { SiBlender, SiBurpsuite, SiCplusplus, SiDart, SiDocker, SiFastapi, SiFlutter, SiGit, SiGnubash, SiJavascript, SiKalilinux, SiLinux, SiMysql, SiNestjs, SiNextdotjs, SiNginx, SiNodedotjs, SiPostgresql, SiPython, SiSqlite, SiTailwindcss, SiTypescript, SiWireshark } from "react-icons/si";
 import { SectionHeading } from "@/components/section-heading";
 import { SectionReveal } from "@/components/section-reveal";
 import { technologies, type TechnologyIcon } from "@/lib/constants";
@@ -16,6 +16,7 @@ const iconMap: Record<TechnologyIcon, IconType> = {
   nestjs: SiNestjs, docker: SiDocker, nginx: SiNginx, git: SiGit, linux: SiLinux,
   flutter: SiFlutter, mysql: SiMysql, websocket: Waypoints, webrtc: Radio,
   burpsuite: SiBurpsuite, ghidra: Binary, wireshark: SiWireshark, kalilinux: SiKalilinux,
+  blender: SiBlender, zbrush: Box, substance: Paintbrush,
 };
 
 export function Technologies() {
