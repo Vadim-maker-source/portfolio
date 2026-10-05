@@ -13,8 +13,8 @@ export function SectionReveal({ children, className }: { children: ReactNode; cl
     const ctx = gsap.context(() => {
       gsap.fromTo(
         "[data-reveal]",
-        { opacity: 0, y: 28 },
-        { opacity: 1, y: 0, duration: 0.75, stagger: 0.09, ease: "power3.out", scrollTrigger: { trigger: root.current, start: "top 82%", once: true } },
+        { opacity: 0, y: 14 },
+        { opacity: 1, y: 0, duration: 0.55, stagger: 0.055, ease: "power2.out", scrollTrigger: { trigger: root.current, start: "top 86%", once: true } },
       );
     }, root);
     return () => ctx.revert();

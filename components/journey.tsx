@@ -1,115 +1,33 @@
-import { SectionHeading } from "@/components/section-heading";
 import { SectionReveal } from "@/components/section-reveal";
-import { cn } from "@/lib/utils";
 
 const journey = [
-  {
-    title: "Техническая основа",
-    copy: "Программирование, устройство систем, алгоритмическое мышление и уверенная работа с цифровой средой.",
-    meta: "База",
-    placement: "lg:col-start-1 lg:row-start-1",
-  },
-  {
-    title: "Разработка продуктов",
-    copy: "Frontend и backend как единая система: интерфейсы, API, данные и real-time коммуникации.",
-    meta: "2 года практики",
-    placement: "lg:col-start-2 lg:row-start-2",
-  },
-  {
-    title: "Системы и инфраструктура",
-    copy: "Linux, Docker, Nginx, deployment и понимание того, как приложение живёт за пределами редактора кода.",
-    meta: "DevOps · 1 год",
-    placement: "lg:col-start-1 lg:row-start-3",
-  },
-  {
-    title: "Новые дисциплины",
-    copy: "Кибербезопасность, AI и mobile-разработка расширяют взгляд на технологии и подходы к решению задач.",
-    meta: "Продолжаю изучать",
-    placement: "lg:col-start-2 lg:row-start-4",
-  },
+  { title: "Техническая основа", copy: "Программирование, устройство систем, алгоритмическое мышление.", meta: "Основа" },
+  { title: "Разработка продуктов", copy: "Интерфейсы, API, данные и real-time как единая система.", meta: "2 года" },
+  { title: "Инфраструктура", copy: "Linux, Docker, Nginx и жизненный цикл приложения после разработки.", meta: "1 год" },
+  { title: "Новые дисциплины", copy: "Безопасность, AI, mobile и 3D расширяют набор рабочих методов.", meta: "Сейчас" },
 ] as const;
 
 export function Journey() {
   return (
-    <section className="section-shell overflow-hidden" aria-labelledby="journey-title">
+    <section className="border-t border-white/14 bg-[#070707] py-[clamp(4.5rem,8vw,7.5rem)] text-white" aria-labelledby="journey-title">
       <SectionReveal className="site-container">
-        <div id="journey-title">
-          <SectionHeading
-            label="Путь развития"
-            title="Каждый новый слой расширяет возможности."
-            description="Не линейная карьерная лестница, а последовательное расширение технического кругозора: от фундаментальных принципов к смежным дисциплинам."
-          />
+        <p className="mb-5 text-xs uppercase tracking-[.08em] text-white/45" data-reveal>Путь / 04</p>
+        <div className="grid gap-8 lg:grid-cols-[1.1fr_.9fr] lg:items-end">
+          <h2 id="journey-title" className="max-w-3xl text-[clamp(2.5rem,5.5vw,5.2rem)] font-normal leading-[.95] tracking-[-.065em]" data-reveal>Профиль вырос из практики, а не из списка ролей.</h2>
+          <p className="max-w-xl text-base leading-7 text-white/58 lg:justify-self-end" data-reveal>Каждый следующий слой появился как ответ на реальную задачу: понять систему глубже, собрать её надёжнее и контролировать больше этапов.</p>
         </div>
 
-        <div className="journey-route relative mt-14">
-          <div className="relative z-10 grid gap-0 lg:grid-cols-2 lg:grid-rows-4 lg:gap-x-32 lg:gap-y-24">
-            {journey.map((item, index) => {
-              return (
-                <div key={item.title} data-reveal className={cn("relative", item.placement)}>
-                  <article className="relative z-10 min-h-[220px] overflow-hidden rounded-[1.5rem] border border-white/[.12] bg-[#0d0f14] p-6 md:p-7">
-                    <p className="text-sm font-medium text-violet-300">Этап {index + 1}</p>
-
-                    <div className="mt-9 max-w-xl">
-                      <h3 className="text-2xl font-semibold tracking-[-.045em] text-zinc-100 md:text-[1.7rem]">{item.title}</h3>
-                      <p className="mt-4 max-w-lg text-sm leading-6 text-zinc-400">{item.copy}</p>
-                    </div>
-
-                    <p className="mt-6 text-sm text-zinc-500">{item.meta}</p>
-                  </article>
-
-                  {index < journey.length - 1 ? <JourneyConnector index={index} /> : null}
-                </div>
-              );
-            })}
-          </div>
+        <div className="mt-16 grid border-t border-white/18 md:grid-cols-2 lg:grid-cols-4">
+          {journey.map((item, index) => (
+            <article key={item.title} data-reveal className="flex min-h-[270px] flex-col border-b border-white/18 py-6 md:border-r md:px-6 lg:border-b-0 first:pl-0 last:border-r-0">
+              <p className="text-xs text-[#a895ff]">0{index + 1}</p>
+              <h3 className="mt-10 text-2xl font-normal leading-tight tracking-[-.04em]">{item.title}</h3>
+              <p className="mt-4 text-sm leading-6 text-white/55">{item.copy}</p>
+              <p className="mt-auto pt-8 text-xs uppercase tracking-[.08em] text-white/35">{item.meta}</p>
+            </article>
+          ))}
         </div>
       </SectionReveal>
     </section>
-  );
-}
-
-function JourneyConnector({ index }: { index: number }) {
-  const desktopMarker = `journey-arrow-${index}`;
-  const mobileMarker = `journey-mobile-arrow-${index}`;
-  const goesRight = index % 2 === 0;
-
-  return (
-    <>
-      <svg
-        aria-hidden="true"
-        className={cn(
-          "journey-connector hidden overflow-visible lg:block",
-          goesRight ? "journey-connector-right" : "journey-connector-left",
-        )}
-        viewBox="0 0 100 100"
-        preserveAspectRatio="none"
-      >
-        <defs>
-          <marker id={desktopMarker} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
-            <path className="journey-route-arrow" d="M 1 1 L 8 5 L 1 9" />
-          </marker>
-        </defs>
-        <path
-          className="journey-route-line"
-          d="M 0 4 C 22 0, 30 28, 53 26 C 75 24, 79 7, 91 18 C 99 27, 87 54, 95 75 C 99 84, 100 91, 100 98"
-          markerEnd={`url(#${desktopMarker})`}
-        />
-      </svg>
-
-      <div aria-hidden="true" className="flex h-24 items-center justify-center lg:hidden">
-        <svg className="journey-mobile-connector overflow-visible" viewBox="0 0 64 100" preserveAspectRatio="none">
-          <defs>
-            <marker id={mobileMarker} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
-              <path className="journey-route-arrow" d="M 1 1 L 8 5 L 1 9" />
-            </marker>
-          </defs>
-          <path
-            className="journey-route-line"
-            d="M 32 1 C 7 16, 56 29, 27 47 C 6 61, 51 72, 32 98"
-            markerEnd={`url(#${mobileMarker})`}
-          />
-        </svg>
-      </div>
-    </>
   );
 }

@@ -20,14 +20,14 @@ export const metadata: Metadata = {
   authors: [{ name: "Vadim67okak" }],
   openGraph: {
     title: "Vadim67okak | Software Engineer",
-    description: "Современные веб-приложения, backend-сервисы и real-time системы.",
+    description: "Интерфейсы, backend, инфраструктура, безопасность и 3D как единая инженерная практика.",
     type: "website",
     siteName: "Vadim67okak Portfolio",
   },
   twitter: {
     card: "summary_large_image",
     title: "Vadim67okak | Software Engineer",
-    description: "Современные веб-приложения, backend-сервисы и real-time системы.",
+    description: "Интерфейсы, backend, инфраструктура, безопасность и 3D как единая инженерная практика.",
   },
 };
 

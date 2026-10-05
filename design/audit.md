@@ -1,16 +1,22 @@
-target: hero-секция на скриншоте `codex-clipboard-5dc3842d-d9c2-417d-9eb7-241e81b02d59.png`  
-goal: насыщенный, современный и авторский первый экран, который за несколько секунд объясняет профиль Vadim67okak
+# Hero audit — 5 October 2026
 
-| # | Область | Проблема | Критичность | Исправление | Усилие |
-|---|---|---|---|---|---|
-| 1 | Композиция | Примерно две трети viewport заняты ничем. Контент начинается слишком низко, поэтому экран воспринимается как недогруженный. | HIGH | Перенести смысловой центр в среднюю треть экрана и использовать всю высоту hero как единую сцену. | M |
-| 2 | Иерархия | Точка следа курсора оказывается единственным объектом в центре и получает больше внимания, чем имя, специализация и CTA. | HIGH | Сформировать сильную центральную композицию; след должен быть реакцией поверх готового дизайна, а не главным событием пустого поля. | S |
-| 3 | Масштаб | Навигация и вспомогательный текст выглядят микроскопическими рядом с гигантским никнеймом. Между уровнями нет промежуточного масштаба. | HIGH | Собрать последовательную шкалу: роль 16–18px, основной тезис 64–88px, описание 20–24px, ссылки 16–18px. | S |
-| 4 | Содержание | Самый крупный текст сообщает только никнейм. Главный экран не объясняет, чем автор полезен и что отличает его от других разработчиков. | HIGH | Сделать главным конкретный тезис о работе; имя оставить как авторскую подпись над ним. | S |
-| 5 | Flow | Основной CTA и контакты прижаты к нижней границе и визуально относятся уже к следующему экрану. На части viewport они будут обрезаться. | HIGH | Поднять CTA внутрь основного смыслового блока и оставить нижнюю полосу только для направлений. | S |
-| 6 | Группировка | Роль и опыт разнесены по противоположным краям на расстояние почти во всю ширину монитора, хотя относятся к одной сущности. | MED | Сгруппировать имя, роль и опыт в одном компактном блоке. | S |
-| 7 | Стиль | Нижняя таблица с вертикальными разделителями выглядит как dashboard, а не персональная обложка. Это снова готовый паттерн вместо характера. | MED | Заменить таблицу на одну спокойную строку направлений без ячеек и рамок. | S |
+## Outcome
 
-notes: аудит выполнен по исходному скриншоту 2541×1301. Видимая проблема подтверждена непосредственно изображением; мобильная версия и интерактивные состояния этим скриншотом не проверялись.
+The hero has one strong idea — a spatial `V67` identity — but the previous execution exposed its construction from primitive bars. That made the identity read as a collection of UI blocks instead of a designed object.
 
-verdict: **NOT READY.** Блокирующая проблема — мёртвая верхняя зона и отсутствие смыслового центра. Текущий hero нельзя исправить только уменьшением отступа: требуется другая сцена и другая иерархия.
+## High priority
+
+1. **The first glyph reads as `∧`, not `V`.** The diagonal bars converge at the top, reversing the intended letter. Replace the handmade construction with a true font contour.
+2. **The `6` reads partly as a lowercase `b`.** A torus plus a diagonal stem does not preserve the glyph silhouette. Use real type geometry for all three characters.
+3. **Chrome, rounded bars make the object feel toy-like.** Reduce metalness and clearcoat, remove capsule geometry, and let a controlled key light describe the extrusion.
+
+## Medium priority
+
+4. **Three separate constructions weaken the identity.** Render `V67` as one continuous typographic sculpture and animate it as a single object.
+5. **The hero object and headline compete for the same visual band.** Keep the mark in the upper field and reserve the lower field for the proposition and navigation.
+
+## Anti-AI pass
+
+- No particles, glows, glass cards, decorative metrics, or pseudo-system labels were added.
+- The violet remains a controlled interaction/light accent, not a background effect.
+- The scroll behavior changes the camera relationship to the identity without exploding it into arbitrary pieces.

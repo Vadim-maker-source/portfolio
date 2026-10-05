@@ -4,10 +4,10 @@ import { SectionReveal } from "@/components/section-reveal";
 
 export function Experience() {
   return (
-    <section id="experience" className="section-shell" aria-labelledby="experience-title">
+    <section id="experience" className="section-shell bg-[#0b0b0c]" aria-labelledby="experience-title">
       <SectionReveal className="site-container">
         <div id="experience-title">
-          <SectionHeading label="Опыт и направления" title="Широкий инструментарий, подкреплённый практикой." description="Работаю с интерфейсами, backend-системами, инфраструктурой и 3D-графикой, развивая каждое направление через практику." />
+          <SectionHeading label="Практика / 02" title="Семь направлений. Одна инженерная логика." description="Фактический опыт, задачи и инструменты без условных процентов и декоративных оценок." />
         </div>
         <ExpertiseGrid />
       </SectionReveal>

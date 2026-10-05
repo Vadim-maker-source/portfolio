@@ -1,7 +1,5 @@
 "use client";
 
-import * as Tooltip from "@radix-ui/react-tooltip";
-import { motion } from "framer-motion";
 import { Binary, Box, Paintbrush, Radio, Waypoints } from "lucide-react";
 import type { IconType } from "react-icons";
 import { SiBlender, SiBurpsuite, SiCplusplus, SiDart, SiDocker, SiFastapi, SiFlutter, SiGit, SiGnubash, SiJavascript, SiKalilinux, SiLinux, SiMysql, SiNestjs, SiNextdotjs, SiNginx, SiNodedotjs, SiPostgresql, SiPython, SiSqlite, SiTailwindcss, SiTypescript, SiWireshark } from "react-icons/si";
@@ -21,28 +19,25 @@ const iconMap: Record<TechnologyIcon, IconType> = {
 
 export function Technologies() {
   return (
-    <section id="technologies" className="section-shell overflow-hidden" aria-labelledby="technologies-title">
+    <section id="technologies" className="section-shell" aria-labelledby="technologies-title">
       <SectionReveal className="site-container">
-        <div id="technologies-title"><SectionHeading label="Языки и технологии" title="Инструменты, на которых строится работа." description="Языки, фреймворки, базы данных и инфраструктурные инструменты, с помощью которых идеи превращаются в надёжные программные продукты." /></div>
-        <Tooltip.Provider delayDuration={250}>
-          <div className="grid grid-cols-2 gap-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-            {technologies.map((technology) => {
-              const Icon = iconMap[technology.icon];
-              return (
-                <Tooltip.Root key={technology.name}>
-                  <Tooltip.Trigger asChild>
-                    <motion.div data-reveal tabIndex={0} whileHover={{ borderColor: "rgba(167,139,250,.25)" }} transition={{ duration: 0.2 }} className="group relative min-h-[142px] cursor-default overflow-hidden rounded-2xl border border-white/[.075] bg-white/[.018] p-4 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-violet-400">
-                      <div className="absolute inset-x-0 bottom-0 h-px scale-x-0 bg-gradient-to-r from-transparent via-violet-400/70 to-transparent transition-transform duration-300 group-hover:scale-x-100" />
-                      <Icon aria-hidden="true" className="size-7 transition-transform duration-300 group-hover:scale-105" style={{ color: technology.color }} />
-                      <div className="mt-8"><p className="text-base font-semibold tracking-[-.02em] text-zinc-100">{technology.name}</p><p className="mt-1.5 text-[.78rem] font-medium uppercase tracking-[.08em] text-zinc-500">{technology.category}</p></div>
-                    </motion.div>
-                  </Tooltip.Trigger>
-                  <Tooltip.Portal><Tooltip.Content sideOffset={8} className="z-[70] rounded-md border border-white/10 bg-zinc-900 px-2.5 py-1.5 text-[.8rem] text-zinc-200 shadow-xl">{technology.name}<Tooltip.Arrow className="fill-zinc-900" /></Tooltip.Content></Tooltip.Portal>
-                </Tooltip.Root>
-              );
-            })}
-          </div>
-        </Tooltip.Provider>
+        <div id="technologies-title">
+          <SectionHeading label="Инструменты / 03" title="Инструменты, на которых строится работа." description="Стек от клиентского интерфейса до инфраструктуры, анализа трафика и 3D-производства." />
+        </div>
+        <div className="grid border-t border-l border-white/14 grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
+          {technologies.map((technology) => {
+            const Icon = iconMap[technology.icon];
+            return (
+              <div key={technology.name} data-reveal className="group flex aspect-square min-h-[150px] flex-col justify-between border-r border-b border-white/14 p-4 transition-colors duration-200 hover:bg-white hover:text-black md:p-5">
+                <Icon aria-hidden="true" className="size-7 text-white/55 transition-colors group-hover:text-[#7657e8]" />
+                <div>
+                  <p className="text-base font-semibold tracking-[-.025em]">{technology.name}</p>
+                  <p className="mt-1 text-xs leading-4 text-white/35 transition-colors group-hover:text-black/55">{technology.category}</p>
+                </div>
+              </div>
+            );
+          })}
+        </div>
       </SectionReveal>
     </section>
   );
